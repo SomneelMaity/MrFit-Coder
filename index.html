@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MrFit Coder - Gym for Coders</title>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&family=Ubuntu&display=swap"
+    rel="stylesheet">
+  <!-- Bootstrap + CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Navigation Bar Header -->
+  <section class="MrFit-heading">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">MrFit Coder</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Courses
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="c++ data structures.html">C++ with Data Structures and Algorithms</a>
+                </li>
+                <li><a class="dropdown-item" href="java data structures.html">Java with Data Structures and
+                    Algorithms</a></li>
+                <li><a class="dropdown-item" href="python data structures.html">Python with Data Structures and
+                    Algorithms</a></li>
+
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="webdev.html">Full Stack Web Development</a></li>
+                <li><a class="dropdown-item" href="machine learning.html">A-Z Machine Learning</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light" type="submit">Search</button>
+          </form>
+          <div class="mx-2">
+            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Login Modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="loginModalLabel">Login to MrFit Coder</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SignUp Modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="signupModalLabel">Sign Up for MrFit Coder</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Carousel Sliding -->
+  <section class="carousel-sliding" id="title">
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="true">
+
+      <div class="carousel-inner">
+        <!-- Full Stack Slide -->
+        <div class="carousel-item active">
+          <img class="slide-image img-fluid" src="Images/Full Satck Developer.png" class="d-block w-100"
+            alt="Full Stack Image">
+          <h5><strong>Become a Full Stack Developer in 6 Months</strong> </h5>
+          <p>Learn HTML5, CSS, Javascript, NodeJS and many more and make internship level projects like Netflix, Spotify
+            and many more in next 6 months. <a class="btn btn-outline-primary btn-sm" role="button" href="#">Join
+              Now</a> .</p>
+          <a class="btn btn-primary" href="webdev.html" role="button">Web Development</a>
+          <a class="btn btn-danger" href="data structures.html" role="button">Data Structures</a>
+          <a class="btn btn-success" href="machine learning.html" role="button">Machine Learning</a>
+        </div>
+        <!-- C++ Dev Slide -->
+        <div class="carousel-item">
+          <img class="slide-image img-fluid" src="Images/C++ Developer.png" class="d-block w-100" alt="C++ Image">
+          <h5><strong>Master C++ with Data Structures and Algorithms for Product Based Companies</strong> </h5>
+          <p>Join our C++ Masterclass with Data Structures and Algorithms to crack your Dream Company as a Software
+            Engineer <a class="btn btn-outline-primary btn-sm" role="button" href="#">Join Now</a></p>
+          <a class="btn btn-primary" href="webdev.html" role="button">Web Development</a>
+          <a class="btn btn-danger" href="data structures.html" role="button">Data Structures</a>
+          <a class="btn btn-success" href="machine learning.html" role="button">Machine Learning</a>
+        </div>
+        <!-- Java Dev Slide -->
+        <div class="carousel-item">
+          <img class="slide-image img-fluid" src="Images/Java Developer.png" class="d-block w-100" alt="Java Image">
+          <h5><strong>Master Core Java with Data Structures and Algorithms for Product Based Companies</strong> </h5>
+          <p>Master Core JAVA with Data Structures and Algorithms and become an Industry Level Java Developer <a
+              class="btn btn-outline-primary btn-sm" role="button" href="#">Join Now</a></p>
+          <a class="btn btn-primary" href="webdev.html" role="button">Web Development</a>
+          <a class="btn btn-danger" href="data structures.html" role="button">Data Structures</a>
+          <a class="btn btn-success" href="machine learning.html" role="button">Machine Learning</a>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container my-4">
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">Ramesh Agarwal</strong>
+              <h3 class="mb-0">Placed in Google as SDE1</h3>
+              <div class="mb-1 text-muted">C++ with Data Structures and Algorithms</div>
+              <p class="card-text mb-auto">I have taken C++ with Data Structures and Algorithms course. This course was
+                extremely helpful as it has improved my problem solving skills which made me crack Google in 9 months.
+              </p>
+              <a href="testimonials.html" class="stretched-link">See More...</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="Images/Ramesh Agarwal.jpg" class="bd-placeholder-img img-fluid" width="200" height="250"
+                alt="Ramesh Agarwal Photo">
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Preeti Sharma</strong>
+              <h3 class="mb-0">Placed in Amazon</h3>
+              <div class="mb-1 text-muted">Full Stack Development</div>
+              <p class="mb-auto">I enrolled in Full Stack Dev Course. This course helped me developing my front end
+                skills but also made me industry ready.Today I am placed in Amazon as a Fullstack Engineer.</p>
+              <a href="testimonials.html" class="stretched-link">See More...</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="Images/Preeti Sharma.jpg" class="bd-placeholder-img img-fluid" width="200" height="250"
+                alt="Preeti Sharma Photo">
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-warning">Rahul Banerjee</strong>
+              <h3 class="mb-0">Placed in Adobe as MTS1</h3>
+              <div class="mb-1 text-muted">Java with Data Structures and Algorithms</div>
+              <p class="card-text mb-auto">I have taken Java with Data Structures and Algorithms course. This course was
+                extremely helpful as it has improved my problem solving skills which made me crack Adobe in 8 months.
+              </p>
+              <a href="testimonials.html" class="stretched-link">See More...</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="Images/Rahul Banerjee.jpg" class="bd-placeholder-img img-fluid" width="200" height="250"
+                alt="Ramesh Agarwal Photo">
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-info">Sohail Hazra</strong>
+              <h3 class="mb-0">Placed in JP Morgan as Front End Engineer</h3>
+              <div class="mb-1 text-muted">Full Stack Development</div>
+              <p class="card-text mb-auto">I enrolled in Full Stack course. This course was extremely helpful as it has
+                improved my problem solving skills which made me a Frontend Engineer.</p>
+              <a href="testimonials.html" class="stretched-link">See More...</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="Images/Sohail Hazra.jpg" class="bd-placeholder-img img-fluid" width="200" height="250"
+                alt="Ramesh Agarwal Photo">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="footer">
+
+    <div class="container-fluid footer-section">
+      <h1 style="font-family: 'Montserrat', sans-serif; font-size: 2.8rem; text-align: center;">MrFit Coder</h1>
+
+      <a class="footer-social" style="color: black; margin: 20px 15px 20px 15px;"
+        href="https://www.facebook.com/somneel.maity/">
+        <ion-icon name="logo-facebook" class="social-icon"></ion-icon>
+      </a>
+      <a class="footer-social" style="color: black; margin: 20px 15px 20px 15px;" href="https://twitter.com/SomneelSM">
+        <ion-icon name="logo-twitter" class="social-icon"></ion-icon>
+      </a>
+      <a class="footer-social" style="color: black; margin: 20px 15px 20px 15px;"
+        href="https://www.instagram.com/somneel_beardo/">
+        <ion-icon name="logo-instagram" class="social-icon"></ion-icon>
+      </a>
+      <a class="footer-social" style="color: black; margin: 20px 15px 20px 15px;"
+        href="https://www.linkedin.com/in/somneelmaity/">
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </a>
+      <p>© Copyright MrFit Coder</p>
+    </div>
+  </section>
+
+  <footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>

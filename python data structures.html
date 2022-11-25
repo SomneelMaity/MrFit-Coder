@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MrFit Coder - Data Structures and Algorithms</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&family=Ubuntu&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap + CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        li {
+            color: #5C2E7E;
+            font-size: 18px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Navigation Bar Header -->
+    <section class="MrFit-heading">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">MrFit Coder</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Courses
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="c++ data structures.html">C++ with Data Structures and Algorithms</a></li>
+                                <li><a class="dropdown-item" href="java data structures.html">Java with Data Structures and Algorithms</a></li>
+                                <li><a class="dropdown-item" href="python data structures.html">Python with Data Structures and Algorithms</a>
+                                </li>
+
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="webdev.html">Full Stack Web Development</a></li>
+                                <li><a class="dropdown-item" href="machine learning.html">A-Z Machine Learning</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                    <div class="mx-2">
+                        <button class="btn btn-danger" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">Login</button>
+                        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signupModal">Sign
+                            Up</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <!-- Login Modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="loginModalLabel">Login to MrFit Coder</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SignUp Modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="signupModalLabel">Sign Up for MrFit Coder</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Heading -->
+    <section class="Intro-Fullstack" style="background-color: #F9F9F9;">
+        <h1 style="text-align: center; padding: 20px 10px; font-family: 'Merriweather-Bold', serif; color: #1C3879;">
+            <strong>Data Structures and Algorithms</strong>
+        </h1>
+        <p>This is the course to pick if you are just getting into coding and want to build a strong foundation. Widely
+            used
+            in competitive programming.</p><br>
+        <!-- Intro To DSA -->
+
+        <div class="Introduction-Fullsatck"
+            style="text-align: left; padding: 0px 15px; font-family: 'Montserrat', sans-serif;">
+            <h2 style="color: #2B4865;">Why should I learn data structures and algorithms ?</h2>
+            <p><strong style="color: #0F3D3E">Building Block for your Career:</strong> No matter whatever career path
+                you
+                choose in the field of computer science, data structures and algorithms lies at the root of it.
+                <br>
+                <strong style="color: #0F3D3E">Essential skill for Job in Software Development:</strong> All top product
+                companies including FAANG will test your skills in data structures and algorithms.
+            </p>
+        </div>
+    </section>
+
+    <!-- Enroll Option -->
+    <section>
+        <div class="enroll-option" style="text-align: right;">
+            <a href="#enroll" class="btn btn-outline-primary">Enroll Now</a>
+        </div>
+        <br>
+    </section>
+
+    <!-- How do you choose between C++ / Java / Python ? -->
+    <section class="join-datastructures">
+
+        <h3 style="color: #790252; padding: 10px 5px 20px 5px;">How do you choose between C++ / Java / Python ?</h3>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <div class="card"
+                        style="background-color: #113f6e; border-radius: 8px; padding-top: 16px; padding-bottom: 16px;">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align: left; color: #EDEDED">C++</h5>
+                            <p class="card-text" style="text-align: left; color: #EDEDED">C++ programs are directly
+                                compiled into
+                                machine-executable
+                                codes which consumes less
+                                time to execute the code. Hence, it
+                                is widely used in competitive programming where you are expected to optimise time and
+                                memory. So, if you
+                                are interested
+                                to explore competitive programming then it is good to start with C++ language.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card"
+                        style="background-color: #113f6e; border-radius: 8px; padding-top: 16px; padding-bottom: 16px;">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align: left; color: #EDEDED">Java</h5>
+                            <p class="card-text" style="text-align: left; color: #EDEDED">Java programs are easy to
+                                understand,
+                                structured and less
+                                prone to errors. Also, they
+                                are platform independent and
+                                portable which makes it a good choice for mobile, web and desktop applications. So, if
+                                you are looking
+                                for a career in
+                                software development then it is good to start with the Java language.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card"
+                        style="background-color: #113f6e; border-radius: 8px; padding-top: 16px; padding-bottom: 16px;">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align: left; color: #EDEDED">Python</h5>
+                            <p class="card-text" style="text-align: left; color: #EDEDED">Python programs are simple in
+                                syntax with
+                                extensive library
+                                support which helps the
+                                programmers to come up with required
+                                logic with few lines of code. It is popular and widely used in the data domains like
+                                data science,
+                                Machine learning,
+                                deep learning etc.., So, if you are looking for a career in the field of Artificial
+                                Intelligence then it
+                                is good to
+                                start with the Python language.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="background-color: #f7f9fb;">
+                <h3
+                    style="text-align: center; color: rgba(10,45,71,.9294117647058824);font-size: 30px; margin-top: 20px; padding-top: 30px;">
+                    How will your journey look like?
+                </h3>
+                <p
+                    style="text-align: center; font-size: 18px; color: rgba(106,127,134,.9294117647058824); width: 60%; margin: 20px auto;">
+                    We have designed a unique program where you can learn Fundamentals of Programming along with Data
+                    Structures
+                    and Algorithms &
+                    experience being a developer sitting at your home
+                </p>
+            </div>
+        </div>
+
+        <!-- Syllabus -->
+
+        <section class="syllabus-section" style="text-align: left; margin-left: 30px;">
+            <hr>
+            <h4
+                style="text-align: left; margin-left: 40px; color: rgba(10,45,71,.9294117647058824);font-size: 30px; margin-top: 20px;">
+                <strong>Syllabus</strong>
+            </h4>
+            <hr>
+            <p>
+                <a class="btn btn-outline-success" data-bs-toggle="collapse" href="#collapseExampleone" role="button"
+                    aria-expanded="false" aria-controls="collapseExampleone">
+                    Language Fundamentals (You can choose any one of C++/JAVA/Python in the course) <ion-icon
+                        name="chevron-down-circle-sharp"></ion-icon>
+                </a>
+            </p>
+            <div class="collapse" id="collapseExampleone">
+                <div class="card card-body">
+                    <div class="row">
+                        <div class="col">
+                            <ul>
+                                <li>C/C++/Java/Python Overview</li>
+                                <li>Logic Building</li>
+                                <li>Data Types</li>
+                                <li>Loops and Conditions</li>
+                                <li>Pattern Programming</li>
+                                <li>Operators and Expressions</li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul>
+                                <li>Input/Output</li>
+                                <li>Functions</li>
+                                <li>Functions and OOPs(Python)</li>
+                                <li>Pointers(C/C++)</li>
+                                <li>Arrays</li>
+                                <li>Structures</li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul>
+                                <li>Character Arrays and Strings</li>
+                                <li>Recursion</li>
+                                <li>Bit Manipulation</li>
+                                <li>STLs(C++)</li>
+                                <li>Collections (Java)</li>
+                                <li>Set, List, Tuples, Dictionary(Python)</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>
+                <a class="btn btn-outline-success" data-bs-toggle="collapse" href="#collapseExampletwo" role="button"
+                    aria-expanded="false" aria-controls="collapseExampletwo" style="margin-top: 15px;">
+                    Data Structures and Algorithms <ion-icon name="chevron-down-circle-sharp"></ion-icon>
+                </a>
+            </p>
+            <div class="collapse" id="collapseExampletwo">
+                <div class="card card-body">
+                    <div class="row">
+                        <div class="col">
+                            <ul>
+                                <li>Linked List</li>
+                                <li>Stacks</li>
+                                <li>Queues</li>
+                                <li>Trees</li>
+                                <li>Heaps</li>
+                                <li>Graphs</li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul>
+                                <li>Segment Trees</li>
+                                <li>Searching</li>
+                                <li>Sorting</li>
+                                <li>Hashing</li>
+                                <li>Intro to DS/Algo</li>
+                                <li>Time Complexity</li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul>
+                                <li>Back Tracking</li>
+                                <li>Divide & Conquer</li>
+                                <li>Greedy Algorithms</li>
+                                <li>Dynamic Programming</li>
+                                <li>String Matching Algorithms</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>
+                <a class="btn btn-outline-success" data-bs-toggle="collapse" href="#collapseExamplethree" role="button"
+                    aria-expanded="false" aria-controls="collapseExamplethree" style="margin-top: 15px;">
+                    Competitve Maths <ion-icon name="chevron-down-circle-sharp"></ion-icon>
+                </a>
+            </p>
+            <div class="collapse" id="collapseExamplethree">
+                <div class="card card-body">
+                    <div class="row">
+                        <div class="col">
+                            <ul>
+                                <li>Prime Numbers</li>
+                                <li>Permutation & Combinations</li>
+                                <li>GCD</li>
+                                <li>LCM</li>
+                                <li>Probablities</li>
+                                <li>Number Theory</li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul>
+                                <li>Modular Arithmetic</li>
+                                <li>Binary Exponention</li>
+                                <li>Matrix Exponentiation</li>
+                                <li>Game Theory</li>
+                                <li>Computational Geometry</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prerequisites -->
+        <section class="prerequisites" style="text-align:left; margin: 30px 10px 20px 40px;">
+            <div class="row">
+                <div class="col">
+                    <h3 style="color: #3B3486; font-size: 40px;"><strong>Prerequisites & Who all should buy this course
+                            ?</strong>
+                    </h3>
+                    <p style="color: #50577A; font-size: 25px;">Coding Interviews, College Exams, Coding Competitions -
+                        you name
+                        it.This program will help you excel in
+                        everything you
+                        do.</p>
+                    <p style="color: #50577A; font-size: 25px;">
+                        <ion-icon name="checkmark-done-outline" style="color: green;"></ion-icon>If you want to start
+                        your
+                        competitve coding journey from
+                        scratch and be a top rated coder, then this course if for you.
+                    </p>
+                </div>
+                <div class="col">
+                    <img src="Images/prerequisites.svg" alt="prerequisites">
+                </div>
+            </div>
+
+        </section>
+
+        <!-- finishing program -->
+        <div class="row" style="background-color: #EEEEEE; margin-bottom: 10px;">
+            <div class="col">
+                <h3
+                    style="color: rgba(10,45,71,.9294117647058824); font-size: 30px; text-align: center; padding-top: 20px;">
+                    What you will be after finishing the program?
+                </h3>
+                <br>
+                <br>
+                <h4 style="text-align: left; font-size: 22px; padding: 15px 10px;">
+                    <ion-icon name="newspaper-outline" style="margin-right: 30px; padding-left: 20px;"></ion-icon>
+                    Get Certificate after Course Completion.
+                </h4>
+                <h4 style="text-align: left; font-size: 22px; padding: 15px 10px;">
+                    <ion-icon name="time-outline" style="margin-right: 30px; padding-left: 20px;"></ion-icon>
+                    Able to crack Online and Face to Face Tech Rounds
+                </h4>
+                <h4 style="text-align: left; font-size: 22px; padding: 15px 10px;">
+                    <ion-icon name="medal-outline" style="margin-right: 30px; padding-left: 20px;"></ion-icon>
+                    Get Confident in Problem Solving
+                </h4>
+            </div>
+            <div class="col">
+                <img src="Images/lady fullstack.jpg" alt="lady fullstack">
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Companies Hire and Anual Growth -->
+    <section class="companies-hire">
+        <h3
+            style="color: rgba(10,45,71,.9294117647058824); font-size: 30px; text-align: center; padding-top: 10px; margin-top: 10px;">
+            Companies that hire for the roles
+        </h3>
+        <div class="row" style="padding: 20px 40px;">
+            <div class="col col-lg-4 col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" style="background-color: #FAF7F0;">Tech Giants</h5>
+                        <hr>
+                        <p class="card-text">Tech Giants always have DSA rounds. The online coding questions will be
+                            completely DSA
+                            based questions.
+
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-4 col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" style="background-color: #FAF7F0;">Established Startups</h5>
+                        <hr>
+                        <p class="card-text">Now a days Established Startups also ask DSA in their online coding
+                            rounds and face to face interviews.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-4 col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" style="background-color: #FAF7F0;">Growing Startups</h5>
+                        <hr>
+                        <p class="card-text">At least there are two rounds of DSA in Growing Startups to check problem
+                            solving
+                            skills of the candidate.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enroll Section -->
+    <section class="enroll-section" id="enroll" style="padding: 20px 10px;">
+        <h4>Python with Data Structures and Algorithms</h4>
+        <h3 style="color: #343A40;">Price: 5000/-</h3>
+        <select class="form-select" aria-label="Default select example"
+            style="text-align: center; width: 30%; margin-left: 33rem; margin-bottom: 10px;">
+            <option selected>Want to Select other Programming Language ?</option>
+            <option value="2"><a href="c++ data structures.html">C++</a></option>
+            <option value="3"><a href="java data structures.html">Java</a></option>
+        </select>
+        <a href="data structures payment.html" class="btn btn-outline-primary">Enroll Now</a>
+    </section>
+
+    <section id="footer">
+
+        <div class="container-fluid footer-section">
+            <h1 style="font-family: 'Montserrat', sans-serif; font-size: 2.8rem; text-align: center;">MrFit Coder</h1>
+
+            <a class="footer-social" style="color: black; margin: 20px 15px 20px 15px;"
+                href="https://www.facebook.com/somneel.maity/">
+                <ion-icon name="logo-facebook" class="social-icon"></ion-icon>
+            </a>
+            <a class="footer-social" style="color: black; margin: 20px 15px 20px 15px;"
+                href="https://twitter.com/SomneelSM">
+                <ion-icon name="logo-twitter" class="social-icon"></ion-icon>
+            </a>
+            <a class="footer-social" style="color: black; margin: 20px 15px 20px 15px;"
+                href="https://www.instagram.com/somneel_beardo/">
+                <ion-icon name="logo-instagram" class="social-icon"></ion-icon>
+            </a>
+            <a class="footer-social" style="color: black; margin: 20px 15px 20px 15px;"
+                href="https://www.linkedin.com/in/somneelmaity/">
+                <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+            <p>© Copyright MrFit Coder</p>
+        </div>
+    </section>
+
+
+    <!-- ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
